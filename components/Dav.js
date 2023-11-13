@@ -6,51 +6,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/4D JONATAN.gltf");
+  const { nodes, materials } = useGLTF("/RENDER HIDA.gltf");
   return (
-    <group {...props} dispose={null}>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Plano001.geometry}
-        material={materials["Material.001"]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Plano002.geometry}
-        material={materials["Material.001"]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Plano003.geometry}
-        material={materials["Material.001"]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Texto.geometry}
-        material={materials["Material.001"]}
-        position={[0.01, 0, 0.31]}
-        rotation={[Math.PI / 2, 0, -Math.PI / 2]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Texto001.geometry}
-        material={materials["Material.001"]}
-        position={[-0.15, 0, 0.59]}
-        rotation={[Math.PI / 2, 0, -Math.PI / 2]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Texto002.geometry}
-        material={materials["Material.001"]}
-        position={[0.01, 0.04, 0.01]}
-        rotation={[Math.PI / 2, 0, -Math.PI / 2]}
-      />
+    <group {...props} dispose={null} scale={1} position={[0, 0.05, 0]}>
       <mesh
         castShadow
         receiveShadow
@@ -72,23 +30,9 @@ export function Dav(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes["TQ_ARD-geom001"].geometry}
-        material={materials["TQ_ARD_front.001"]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes["TQ_ARD-geom001_1"].geometry}
-        material={materials["back-dil"]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes["TQ_ARD-geom001_2"].geometry}
-        material={materials["TQ_ARD_edge.001"]}
+        geometry={nodes["TQ_ARD-geom_3"].geometry}
+        material={materials["Material.001"]}
       />
     </group>
   );
 }
-
-useGLTF.preload("/4D JONATAN.gltf");
